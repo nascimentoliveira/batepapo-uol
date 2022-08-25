@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+body {
+    background-color: #E5E5E5;
+}
+
+.website {
+    font-family: 'Roboto';
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 0 22px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+header figure img {
+    height: 53px;
+    width: 75px;
+}
+
+ion-icon {
+    height: 45px;
+    width: 45px;
+    pointer-events: none;
+}
+
+main {
+    padding: 104px 0px;
+}
+
+.message-box {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    margin: 2px 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.message-content {
+    margin: 0px 8px;
+}
+
+main .in-out {
+    background-color: #DCDCDC;
+}
+
+main .reserved {
+    background-color: #FFDEDE;
+}
+
+.time {
+    color:#AAAAAA;
+}
+
+strong {
+    font-weight: 700;
+}
+
+footer {
+    height: 80px;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    padding: 0 22px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+}
+
+footer input {
+    height: 70%;
+    width: 100%;
+    border: none;
+    border:0;
+    outline:0;
+}
+
+input::placeholder {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+}

@@ -43,10 +43,8 @@ main {
     height: 40px;
     display: flex;
     align-items: center;
-    background-color: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
     border-radius: 2px;
-    margin: 2px 0px;
+    margin: 4px 0px;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -56,11 +54,15 @@ main {
     margin: 0px 8px;
 }
 
-main .in-out {
+.message {
+    background-color: #FFFFFF;
+}
+
+.status {
     background-color: #DCDCDC;
 }
 
-main .reserved {
+.private_message {
     background-color: #FFDEDE;
 }
 

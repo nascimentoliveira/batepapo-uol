@@ -5,6 +5,14 @@ let messagesShown = [];
 
 const timeIntervalStatus = 5000;
 const timeIntervalUpdate = 3000;
+const input = document.querySelector("footer input").addEventListener("keypress", sendEnter);
+
+function sendEnter(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.querySelector("footer ion-icon").click();
+    }
+}
 
 function processError(reply) {
 	switch (reply.response.status) {

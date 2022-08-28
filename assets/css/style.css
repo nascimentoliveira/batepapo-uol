@@ -40,18 +40,20 @@ main {
 }
 
 .message-box {
-    height: 40px;
+    min-height: 40px;
+    height: auto;
     display: flex;
     align-items: center;
     border-radius: 2px;
     margin: 4px 0px;
     font-weight: 400;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 18px;
 }
 
 .message-content {
-    margin: 0px 8px;
+    margin: 5px 8px;
+    word-break: break-word;
 }
 
 .message {

@@ -2,6 +2,8 @@ let participant;
 let idKeepConnection;
 let idUpdateMessages;
 let messagesShown = [];
+let sendTo = "Todos";
+let visibilitySelected = "Público";
 
 const timeIntervalStatus = 5000;
 const timeIntervalUpdate = 3000;
@@ -43,6 +45,7 @@ function keepConnection() {
 }
 
 function processResponseLogon(response) {
+    updateMessages();
     idKeepConnection = setInterval(keepConnection, timeIntervalStatus);
     idUpdateMessages = setInterval(updateMessages, timeIntervalUpdate);
 }
@@ -120,6 +123,26 @@ function sendMessage() {
         promisse.catch(processError);
     }
     input.value = "";
+}
+
+function showMenu() {
+    const aside = document.querySelector("aside");
+    const background = document.querySelector(".background");
+    aside.classList.toggle("noShow");
+    background.classList.toggle("noShow");
+}
+
+function select(element) {
+    const elementParent = element.parentNode;
+    const adviceSendVisibility = document.querySelector(".advice-send-visibility");
+    elementParent.querySelector(".selected").classList.remove("selected");
+    element.classList.add("selected");
+    if (elementParent.classList.contains("active-users")) {
+        sendTo = element.querySelector("span").innerHTML;
+    } else {
+        visibilitySelected = element.querySelector("span").innerHTML;
+    }
+    adviceSendVisibility.innerHTML = `Enviando para ${sendTo} (${visibilitySelected})`;
 }
 
 participant = logon();

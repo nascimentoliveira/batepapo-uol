@@ -15,15 +15,54 @@
                 <figure><img src="./assets/images/logo.png" alt="Logo Bate Papo Uol" title="BATE PAPO UOL"/></figure>
                 <span onclick="showMenu()" title="MENU PESSOAS"><ion-icon name="people-sharp"></ion-icon></span>
             </header>
-            <aside>
-                <section class="users"></section>
-                <section class="visibility"></section>
+            <div onclick="showMenu()" class="background noShow">
+            </div>
+            <aside class="noShow">
+                <section class="active-users">
+                    <div>Escolha um contato para enviar mensagem:</div>
+                    <section onclick="select(this)"class="user selected" data-identifier="participant">
+                        <div>
+                            <ion-icon name="people-sharp"></ion-icon>
+                            <span>Todos</span>
+                        </div>
+                        <ion-icon name="checkmark-sharp"></ion-icon>
+                    </section>
+                    <section onclick="select(this)" class="user" data-identifier="participant">
+                        <div>
+                            <ion-icon name="person-circle-sharp"></ion-icon>
+                            <span>Maria</span>
+                        </div>
+                        <ion-icon name="checkmark-sharp"></ion-icon>
+                    </section>
+                </section>
+                <section class="visibility">
+                    <div>Escolha a visibilidade:</div>
+                    <section onclick="select(this)" class="visibility-type selected" data-identifier="visibility">
+                        <div>
+                            <ion-icon name="lock-open"></ion-icon>
+                            <span>Público</span>
+                        </div>
+                        <ion-icon name="checkmark-sharp"></ion-icon>
+                    </section>
+                    <section onclick="select(this)" class="visibility-type" data-identifier="visibility">
+                        <div>
+                            <ion-icon name="lock-closed"></ion-icon>
+                            <span>Reservadamente</span>
+                        </div>
+                        <ion-icon name="checkmark-sharp"></ion-icon>
+                    </section>
+                </section>
             </aside>
             <main>
             </main>
             <footer>
-                <input type="text" placeholder="Escreva aqui..."></input>
-                <span onclick="sendMessage()" title="ENVIAR"><ion-icon name="paper-plane-outline"></ion-icon></span>
+                <div class="input-div">
+                    <input type="text" placeholder="Escreva aqui..."></input>
+                    <span onclick="sendMessage()" title="ENVIAR"><ion-icon name="paper-plane-outline"></ion-icon></span>
+                </div>
+                <div class="advice-send-visibility">
+                    Enviando para Todos (Público)
+                </div>
             </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

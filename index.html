@@ -7,10 +7,16 @@
         <link rel="shortcut icon" href="./assets/images/icon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
-        <link rel="stylesheet" href="./assets/css/anims.css" />
     </head>
     <body>
-        <div class="website">
+        <section class="login">
+            <figure><img src="./assets/images/logo.png" alt="Logo Bate Papo Uol" title="BATE PAPO UOL"/></figure>
+            <input type="text" placeholder="Digite seu nome" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite seu nome'"></input>
+            <button onclick="login()">Entrar</button>
+            <img class="noShow" src="./assets/images/spinner.gif" alt="Loading" />
+            <span class="noShow">Entrando...</span>
+        </section>
+        <div class="website noShow">
             <header>
                 <figure><img src="./assets/images/logo.png" alt="Logo Bate Papo Uol" title="BATE PAPO UOL"/></figure>
                 <span onclick="showMenu()" title="MENU PESSOAS"><ion-icon name="people-sharp"></ion-icon></span>
@@ -19,21 +25,6 @@
             </div>
             <aside class="noShow">
                 <section class="active-users">
-                    <div>Escolha um contato para enviar mensagem:</div>
-                    <section onclick="select(this)"class="user selected" data-identifier="participant">
-                        <div>
-                            <ion-icon name="people-sharp"></ion-icon>
-                            <span>Todos</span>
-                        </div>
-                        <ion-icon name="checkmark-sharp"></ion-icon>
-                    </section>
-                    <section onclick="select(this)" class="user" data-identifier="participant">
-                        <div>
-                            <ion-icon name="person-circle-sharp"></ion-icon>
-                            <span>Maria</span>
-                        </div>
-                        <ion-icon name="checkmark-sharp"></ion-icon>
-                    </section>
                 </section>
                 <section class="visibility">
                     <div>Escolha a visibilidade:</div>
